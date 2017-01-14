@@ -13,7 +13,7 @@ export class GoogleMaps {
   mapLoaded: any;
   mapLoadedObserver: any;
   currentMarker: any;
-  apiKey: string;
+  apiKey: string = 'AIzaSyC_3C2ddD5Y8Vt-xYpLBQ-DWhvUvsEWaes';
 
   constructor(public connectivityService: Connectivity) {
 
@@ -51,7 +51,8 @@ export class GoogleMaps {
           let script = document.createElement("script");
           script.id = "googleMaps";
 
-          if(this.apiKey){
+          if (this.apiKey) {
+            console.log('API is: ', this.apiKey);
             script.src = 'http://maps.google.com/maps/api/js?key=' + this.apiKey + '&callback=mapInit';
           } else {
             script.src = 'http://maps.google.com/maps/api/js?callback=mapInit';       
