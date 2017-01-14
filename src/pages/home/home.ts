@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-
-import { NavController } from 'ionic-angular';
 import { LocationPage } from '../location/location';
 import { MyDetailsPage } from '../my-details/my-details';
 import { CampDetailsPage } from '../camp-details/camp-details';
+import { QuickListsHomePage } from '../quicklistshome/quicklistshome';
 
 @Component({
   selector: 'page-home',
@@ -11,12 +10,13 @@ import { CampDetailsPage } from '../camp-details/camp-details';
 })
 export class HomePage {
 
-  tabRoot1: any = LocationPage;
-  tabRoot2: any = MyDetailsPage;
-  tabRoot3: any = CampDetailsPage;
+  tab1Root: any = LocationPage;
+  tab2Root: any = MyDetailsPage;
+  tab3Root: any = CampDetailsPage;
+  tab4Root: any = QuickListsHomePage;
 
-  constructor(public navCtrl: NavController) {
-    
+  constructor(){
+
   }
 
 }
