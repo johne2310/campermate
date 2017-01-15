@@ -34,6 +34,7 @@ export class LocationPage {
 
         let mapLoaded = this.maps.init(this.mapElement.nativeElement, this.pleaseConnect.nativeElement).then(() => {
 
+          
           if(savedLocation){
             
             this.latitude = savedLocation.latitude;
